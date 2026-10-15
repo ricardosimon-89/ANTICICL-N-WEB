@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SEO Optimizado al máximo -->
+    <title>Anticiclón | Eventos de Aventura, Extraescolares y Campamentos en Toledo y CLM</title>
+    <meta name="description" content="Más de 25 años organizando actividades deportivas, extraescolares para colegios, campamentos para ayuntamientos y teambuilding para empresas en Toledo y Castilla-La Mancha.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        heading: ['Montserrat', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            red: '#E11D48',     // Rojo vibrante corporativo
+                            darkred: '#BE123C', // Rojo hover
+                            dark: '#0F172A',    // Azul pizarra oscuro profesional
+                            light: '#F8FAFC'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .hero-bg {
+            background-image: linear-gradient(to right, rgba(15, 23, 42, 0.92), rgba(15, 23, 42, 0.65)), url('https://images.unsplash.com/photo-1533130061792-64b345e4a833?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        .card-hover {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .card-hover:hover {
+            transform: translateY(-6px);
+        }
+    </style>
+</head>
+<body class="bg-brand-light text-slate-800 antialiased selection:bg-brand-red selection:text-white">
+
+    <!-- Top Bar Informativa -->
+    <div class="bg-brand-dark text-slate-300 text-xs py-2.5 px-6 hidden md:block border-b border-slate-800">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="flex items-center space-x-6">
+                <span><i class="fa-solid fa-location-dot text-brand-red mr-2"></i>Operamos en Toledo, Castilla-La Mancha y nivel nacional</span>
+                <a href="mailto:info@anticiclon.es" class="hover:text-white transition"><i class="fa-solid fa-envelope text-brand-red mr-2"></i>info@anticiclon.es</a>
+            </div>
+            <div class="flex items-center space-x-4">
+                <span class="text-emerald-400 font-semibold"><i class="fa-solid fa-shield-halved mr-1"></i> +25 años de experiencia certificada</span>
+                <a href="tel:637866425" class="font-bold text-white hover:text-brand-red transition"><i class="fa-solid fa-phone mr-1"></i> 637 866 425</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navegación Principal Sticky -->
+    <nav class="bg-white/95 backdrop-blur-md shadow-sm sticky top-0 z-50 border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo Blanco y Rojo -->
+                <a href="#" class="flex items-center space-x-2">
+                    <div class="bg-brand-red text-white font-heading font-black text-2xl px-3 py-1.5 rounded-lg tracking-wider shadow-md flex items-center">
+                        <span>ANTICICLÓN</span>
+                    </div>
+                </a>
+
+                <!-- Enlaces Desktop -->
+                <div class="hidden md:flex items-center space-x-8 font-semibold text-sm text-slate-600">
+                    <a href="#soluciones" class="hover:text-brand-red transition">Servicios a Medida</a>
+                    <a href="#equipamiento" class="hover:text-brand-red transition">Material y Flota Propia</a>
+                    <a href="#clientes" class="hover:text-brand-red transition">Quién Confía en Nosotros</a>
+                    <a href="#presupuesto" class="hover:text-brand-red transition">Contacto</a>
+                </div>
+
+                <!-- Botón CTA Directo -->
+                <div class="flex items-center space-x-3">
+                    <a href="https://wa.me/34637866425?text=Hola%20Anticicl%C3%B3n,%20me%20gustar%C3%ADa%20pedir%20informaci%C3%B3n%20y%20presupuesto%20para%20un%20evento." target="_blank" class="bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-2.5 rounded-xl font-bold text-sm transition shadow-sm flex items-center">
+                        <i class="fa-brands fa-whatsapp text-lg mr-2"></i>
+                        <span class="hidden sm:inline">WhatsApp Directo</span>
+                        <span class="sm:hidden">WhatsApp</span>
+                    </a>
+                    <a href="#presupuesto" class="bg-brand-red hover:bg-brand-darkred text-white px-5 py-2.5 rounded-xl font-bold text-sm transition shadow-md hidden lg:inline-block">
+                        Pedir Presupuesto
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <header class="hero-bg text-white py-20 lg:py-28 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto relative z-10">
+            <div class="lg:w-2/3">
+                <div class="inline-flex items-center space-x-2 bg-brand-red/20 border border-brand-red/40 text-rose-300 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider mb-6">
+                    <i class="fa-solid fa-medal"></i>
+                    <span>25 Años Liderando el Ocio, Deporte y Aventura</span>
+                </div>
+                <h1 class="font-heading text-4xl sm:text-5xl lg:text-6xl font-black leading-tight mb-6">
+                    Organizamos tu Evento, Campamento o Actividad <span class="text-brand-red">Sin Que Te Preocupes Por Nada.</span>
+                </h1>
+                <p class="text-lg sm:text-xl text-slate-200 mb-8 max-w-2xl font-normal leading-relaxed">
+                    Desde la gestión integral de extraescolares y campamentos municipales hasta jornadas de <span class="font-semibold text-white">teambuilding</span> y grandes fiestas. Contamos con <strong class="text-white">flota y material propio</strong> para desplazarnos a cualquier punto de Toledo, Castilla-La Mancha y alrededores.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#presupuesto" class="bg-brand-red hover:bg-brand-darkred text-white px-8 py-4 rounded-xl font-heading font-bold text-base text-center transition shadow-lg shadow-brand-red/30 flex items-center justify-center">
+                        <span>Solicitar Propuesta a Medida</span>
+                        <i class="fa-solid fa-arrow-right ml-2"></i>
+                    </a>
+                    <a href="https://wa.me/34637866425?text=Hola,%20necesito%20informaci%C3%B3n%20sobre%20vuestras%20actividades." target="_blank" class="bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/30 text-white px-8 py-4 rounded-xl font-heading font-bold text-base text-center transition flex items-center justify-center">
+                        <i class="fa-brands fa-whatsapp text-emerald-400 text-xl mr-2"></i>
+                        <span>Hablar con un Coordinador</span>
+                    </a>
+                </div>
+
+                <!-- Micro-garantías -->
+                <div class="mt-12 pt-8 border-t border-slate-700/60 grid grid-cols-2 sm:grid-cols-3 gap-6 text-sm text-slate-300">
+                    <div class="flex items-center space-x-2.5">
+                        <i class="fa-solid fa-circle-check text-brand-red text-lg"></i>
+                        <span>Monitores Titulados y Seguros RC</span>
+                    </div>
+                    <div class="flex items-center space-x-2.5">
+                        <i class="fa-solid fa-circle-check text-brand-red text-lg"></i>
+                        <span>Material Propio Sin Intermediarios</span>
+                    </div>
+                    <div class="flex items-center space-x-2.5 col-span-2 sm:col-span-1">
+                        <i class="fa-solid fa-circle-check text-brand-red text-lg"></i>
+                        <span>Nos Desplazamos a Tu Ubicación</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- BARRA DE PRUEBA SOCIAL (CLIENTES REALES) -->
+    <section id="clientes" class="bg-white py-10 border-b border-slate-200 px-4">
+        <div class="max-w-7xl mx-auto">
+            <p class="text-center text-xs font-bold uppercase tracking-widest text-slate-400 mb-6">
+                Instituciones y centros educativos que ya confían en la experiencia de Anticiclón S.L.
+            </p>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 items-center text-center">
+                <div class="p-3 bg-slate-50 rounded-lg border border-slate-100 font-heading font-bold text-slate-700 text-sm flex items-center justify-center space-x-2">
+                    <i class="fa-solid fa-building-columns text-brand-red"></i>
+                    <span>Ayto. de Toledo</span>
+                </div>
+                <div class="p-3 bg-slate-50 rounded-lg border border-slate-100 font-heading font-bold text-slate-700 text-sm flex items-center justify-center space-x-2">
+                    <i class="fa-solid fa-building-columns text-brand-red"></i>
+                    <span>Ayto. de Cuenca</span>
+                </div>
+                <div class="p-3 bg-slate-50 rounded-lg border border-slate-100 font-heading font-bold text-slate-700 text-sm flex items-center justify-center space-x-2">
+                    <i class="fa-solid fa-graduation-cap text-slate-500"></i>
+                    <span>Colegio Europa</span>
+                </div>
+                <div class="p-3 bg-slate-50 rounded-lg border border-slate-100 font-heading font-bold text-slate-700 text-sm flex items-center justify-center space-x-2">
+                    <i class="fa-solid fa-graduation-cap text-slate-500"></i>
+                    <span>C. Divina Pastora</span>
+                </div>
+                <div class="p-3 bg-slate-50 rounded-lg border border-slate-100 font-heading font-bold text-slate-700 text-sm flex items-center justify-center space-x-2">
+                    <i class="fa-solid fa-graduation-cap text-slate-500"></i>
+                    <span>CP Alfonso VI</span>
+                </div>
+                <div class="p-3 bg-slate-50 rounded-lg border border-slate-100 font-heading font-bold text-slate-700 text-sm flex items-center justify-center space-x-2">
+                    <i class="fa-solid fa-graduation-cap text-slate-500"></i>
+                    <span>Colegio Mayol</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EMBUDO POR PERFILES (4 PILARES) -->
+    <section id="soluciones" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+            <span class="text-brand-red font-bold text-sm uppercase tracking-wider">Soluciones Llave en Mano</span>
+            <h2 class="font-heading text-3xl sm:text-4xl font-extrabold text-brand-dark mt-2 mb-4">
+                ¿Para quién organizamos el próximo evento?
+            </h2>
+            <p class="text-slate-600 text-lg">
+                Selecciona tu perfil. Adaptamos toda nuestra logística, monitores e infraestructura a las necesidades exactas de tu grupo o institución.
+            </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8">
+            <!-- 1. Colegios y AMPAS -->
+            <div class="bg-white rounded-2xl shadow-md border border-slate-100 overflow-hidden card-hover flex flex-col justify-between">
+                <div>
+                    <div class="h-56 bg-slate-200 relative">
+                        <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Actividades para colegios" class="w-full h-full object-cover">
+                        <div class="absolute top-4 left-4 bg-brand-red text-white text-xs font-bold px-3 py-1.5 rounded-full uppercase">
+                            Centros Educativos y AMPAS
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="font-heading text-2xl font-bold text-brand-dark mb-3">Colegios e Institutos</h3>
+                        <p class="text-slate-600 mb-6 leading-relaxed">
+                            Nos encargamos de la gestión integral de <strong>actividades extraescolares</strong> durante todo el curso, fiestas de fin de curso dentro de tu centro, excursiones de un día, viajes escolares y campamentos educativos.
+                        </p>
+                        <ul class="space-y-2 text-sm text-slate-700 mb-6">
+                            <li><i class="fa-solid fa-check text-brand-red mr-2"></i>Gestión administrativa e inscripciones sin carga para el centro.</li>
+                            <li><i class="fa-solid fa-check text-brand-red mr-2"></i>Montaje de hinchables, cañón de espuma y juegos en vuestro patio.</li>
+                            <li><i class="fa-solid fa-check text-brand-red mr-2"></i>Excursiones multiaventura (tirolinas, piraguas, BTT).</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="px-8 pb-8">
+                    <button onclick="seleccionarPerfil('Colegio / Centro Educativo')" class="w-full bg-slate-900 hover:bg-brand-red text-white font-bold py-3.5 px-6 rounded-xl transition flex items-center justify-center space-x-2">
+                        <span>Solicitar Propuesta para Colegio</span>
+                        <i class="fa-solid fa-chevron-right text-xs"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- 2. Ayuntamientos -->
+            <div class="bg-white rounded-2xl shadow-md border border-slate-100 overflow-hidden card-hover flex flex-col justify-between">
+                <div>
+                    <div class="h-56 bg-slate-200 relative">
+                        <img src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Eventos para Ayuntamientos" class="w-full h-full object-cover">
+                        <div class="absolute top-4 left-4 bg-brand-dark text-white text-xs font-bold px-3 py-1.5 rounded-full uppercase">
+                            Administración Pública
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="font-heading text-2xl font-bold text-brand-dark mb-3">Ayuntamientos y Concejalías</h3>
+                        <p class="text-slate-600 mb-6 leading-relaxed">
+                            Ejecutamos programas de ocio juvenil, <strong>campamentos urbanos y de verano municipales</strong>, fiestas patronales, semanas culturales, gestión de escuelas deportivas y organización de torneos o carreras populares.
+                        </p>
+                        <ul class="space-y-2 text-sm text-slate-700 mb-6">
+                            <li><i class="fa-solid fa-check text-brand-red mr-2"></i>Nos desplazamos a cualquier municipio de CLM u otras provincias.</li>
+                            <li><i class="fa-solid fa-check text-brand-red mr-2"></i>Amplia solvencia técnica con Ayuntamientos como Toledo o Cuenca.</li>
+                            <li><i class="fa-solid fa-check text-brand-red mr-2"></i>Proyectos socioeducativos, deportivos y parques infantiles completos.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="px-8 pb-8">
+                    <button onclick="seleccionarPerfil('Ayuntamiento / Entidad Pública')" class="w-full bg-slate-900 hover:bg-brand-red text-white font-bold py-3.5 px-6 rounded-xl transition flex items-center justify-center space-x-2">
+                        <span>Solicitar Dossier para Ayuntamiento</span>
+                        <i class="fa-solid fa-chevron-right text-xs"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- 3. Empresas -->
+            <div class="bg-white rounded-2xl shadow-md border border-slate-100 overflow-hidden card-hover flex flex-col justify-between">
+                <div>
+                    <div class="h-56 bg-slate-200 relative">
+                        <img src="https://images.unsplash.com/photo-1528605248644-14dd04022da1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Teambuilding para empresas" class="w-full h-full object-cover">
+                        <div class="absolute top-4 left-4 bg-blue-600 text-white text-xs font-bold px-3 py-1.5 rounded-full uppercase">
+                            Corporativo y RRHH
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="font-heading text-2xl font-bold text-brand-dark mb-3">Empresas y Team Building</h3>
+                        <p class="text-slate-600 mb-6 leading-relaxed">
+                            Diseñamos eventos corporativos a medida para cohesionar equipos, motivar empleados o realizar actos promocionales. Desde retos en la naturaleza hasta simuladores de alta competición.
+                        </p>
+                        <ul class="space-y-2 text-sm text-slate-700 mb-6">
+                            <li><i class="fa-solid fa-check text-brand-red mr-2"></i>Jornadas de convivencia, Family Days y dinámicas de grupo.</li>
+                            <li><i class="fa-solid fa-check text-brand-red mr-2"></i>Rutas en Quads, BTT (Bicicleta Todo Terreno), canoas y orientación.</li>
+                            <li><i class="fa-solid fa-check text-brand-red mr-2"></i>Simuladores de Fórmula 1 y zonas gaming para eventos corporativos.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="px-8 pb-8">
+                    <button onclick="seleccionarPerfil('Empresa / Evento Corporativo')" class="w-full bg-slate-900 hover:bg-brand-red text-white font-bold py-3.5 px-6 rounded-xl transition flex items-center justify-center space-x-2">
+                        <span>Presupuesto para Empresas</span>
+                        <i class="fa-solid fa-chevron-right text-xs"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- 4. Particulares -->
+            <div class="bg-white rounded-2xl shadow-md border border-slate-100 overflow-hidden card-hover flex flex-col justify-between">
+                <div>
+                    <div class="h-56 bg-slate-200 relative">
+                        <img src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Fiestas para particulares" class="w-full h-full object-cover">
+                        <div class="absolute top-4 left-4 bg-emerald-600 text-white text-xs font-bold px-3 py-1.5 rounded-full uppercase">
+                            Familias y Amigos
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="font-heading text-2xl font-bold text-brand-dark mb-3">Particulares y Celebraciones</h3>
+                        <p class="text-slate-600 mb-6 leading-relaxed">
+                            Convierte cualquier cumpleaños, comunión, reunión familiar o despedida en una experiencia inolvidable. Alquilamos el equipamiento o te organizamos una jornada de aventura completa.
+                        </p>
+                        <ul class="space-y-2 text-sm text-slate-700 mb-6">
+                            <li><i class="fa-solid fa-check text-brand-red mr-2"></i>Castillos hinchables, pistas americanas y cañón de espuma a domicilio.</li>
+                            <li><i class="fa-solid fa-check text-brand-red mr-2"></i>Actividades multiaventura: escalada, tirolinas, rutas en BTT y canoas.</li>
+                            <li><i class="fa-solid fa-check text-brand-red mr-2"></i>Adaptado a todas las edades y tamaños de grupo.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="px-8 pb-8">
+                    <button onclick="seleccionarPerfil('Particular / Fiesta Privada')" class="w-full bg-slate-900 hover:bg-brand-red text-white font-bold py-3.5 px-6 rounded-xl transition flex items-center justify-center space-x-2">
+                        <span>Consultar Disponibilidad y Precios</span>
+                        <i class="fa-solid fa-chevron-right text-xs"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ARSENAL DE EQUIPAMIENTO PROPIO (EL GRAN DIFERENCIAL) -->
+    <section id="equipamiento" class="bg-brand-dark text-white py-20 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col lg:flex-row justify-between items-start lg:items-end mb-14">
+                <div class="max-w-2xl">
+                    <span class="text-brand-red font-bold text-sm uppercase tracking-wider">Infraestructura Real sin Intermediarios</span>
+                    <h2 class="font-heading text-3xl sm:text-4xl font-extrabold mt-2">
+                        Contamos con Todo el Material para Crear un Evento Inolvidable
+                    </h2>
+                </div>
+                <p class="text-slate-400 mt-4 lg:mt-0 max-w-md text-sm">
+                    Desde atracciones hinchables hasta vehículos a motor y simuladores virtuales. Si necesitas tirolinas o rocódromo, localizamos el espacio ideal y lo montamos.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Item 1 -->
+                <div class="bg-slate-800/70 border border-slate-700 p-6 rounded-2xl hover:border-brand-red transition">
+                    <div class="w-12 h-12 bg-brand-red/20 text-brand-red rounded-xl flex items-center justify-center text-2xl mb-4">
+                        <i class="fa-solid fa-chess-rook"></i>
+                    </div>
+                    <h4 class="font-heading font-bold text-lg mb-2">Castillos Hinchables y Espuma</h4>
+                    <p class="text-slate-400 text-sm">Hinchables deportivos, pistas americanas, toboganes y cañón de espuma profesional para fiestas escolares y patronales.</p>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="bg-slate-800/70 border border-slate-700 p-6 rounded-2xl hover:border-brand-red transition">
+                    <div class="w-12 h-12 bg-brand-red/20 text-brand-red rounded-xl flex items-center justify-center text-2xl mb-4">
+                        <i class="fa-solid fa-flag-checkered"></i>
+                    </div>
+                    <h4 class="font-heading font-bold text-lg mb-2">Simuladores F1 y Zona Gaming</h4>
+                    <p class="text-slate-400 text-sm">Simuladores de conducción de Fórmula 1 y consolas PlayStation para eventos corporativos, ferias juveniles y celebraciones.</p>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="bg-slate-800/70 border border-slate-700 p-6 rounded-2xl hover:border-brand-red transition">
+                    <div class="w-12 h-12 bg-brand-red/20 text-brand-red rounded-xl flex items-center justify-center text-2xl mb-4">
+                        <i class="fa-solid fa-truck-monster"></i>
+                    </div>
+                    <h4 class="font-heading font-bold text-lg mb-2">Quads y Flota de Bicis (BTT)</h4>
+                    <p class="text-slate-400 text-sm">Rutas guiadas sobre ruedas en plena naturaleza. Contamos con flota propia de Quads y Bicicletas Todo Terreno (BTT).</p>
+                </div>
+
+                <!-- Item 4 -->
+                <div class="bg-slate-800/70 border border-slate-700 p-6 rounded-2xl hover:border-brand-red transition">
+                    <div class="w-12 h-12 bg-brand-red/20 text-brand-red rounded-xl flex items-center justify-center text-2xl mb-4">
+                        <i class="fa-solid fa-water"></i>
+                    </div>
+                    <h4 class="font-heading font-bold text-lg mb-2">Canoas, Tirolinas y Rocódromo</h4>
+                    <p class="text-slate-400 text-sm">Rutas en canoas, escalada y aventura vertical. Si nos pides tirolina o rocódromo, gestionamos el emplazamiento perfecto.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN DE PRESUPUESTO RÁPIDO (CONECTADA A WHATSAPP) -->
+    <section id="presupuesto" class="py-20 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
+        <div class="bg-white rounded-3xl shadow-xl border border-slate-100 overflow-hidden grid lg:grid-cols-5">
+            
+            <!-- Columna Izquierda: Info directa -->
+            <div class="lg:col-span-2 bg-brand-red text-white p-8 sm:p-10 flex flex-col justify-between">
+                <div>
+                    <h3 class="font-heading text-2xl sm:text-3xl font-extrabold mb-4">Cuéntanos tu idea y la hacemos realidad</h3>
+                    <p class="text-rose-100 text-sm mb-8 leading-relaxed">
+                        Rellena este breve formulario y recibirás atención directa de nuestro equipo coordinador. Sin esperas ni intermediarios.
+                    </p>
+                    
+                    <div class="space-y-5 text-sm">
+                        <div class="flex items-start space-x-3">
+                            <i class="fa-solid fa-phone-volume text-xl mt-0.5"></i>
+                            <div>
+                                <p class="text-rose-200 text-xs uppercase font-bold">Teléfono y WhatsApp</p>
+                                <a href="tel:637866425" class="font-bold text-lg hover:underline">637 866 425</a>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <i class="fa-solid fa-envelope text-xl mt-0.5"></i>
+                            <div>
+                                <p class="text-rose-200 text-xs uppercase font-bold">Correo Electrónico</p>
+                                <a href="mailto:info@anticiclon.es" class="font-bold text-base hover:underline">info@anticiclon.es</a>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <i class="fa-solid fa-map-location-dot text-xl mt-0.5"></i>
+                            <div>
+                                <p class="text-rose-200 text-xs uppercase font-bold">Zona de Actuación</p>
+                                <p class="font-semibold">Toledo, Castilla-La Mancha y desplazamientos a otras provincias.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-10 pt-6 border-t border-rose-400/40 text-xs text-rose-100">
+                    <i class="fa-solid fa-bolt mr-1"></i> Respuesta rápida garantizada en menos de 24h laborables.
+                </div>
+            </div>
+
+            <!-- Columna Derecha: Formulario Interactivo -->
+            <div class="lg:col-span-3 p-8 sm:p-10">
+                <form id="formPresupuesto" onsubmit="enviarWhatsApp(event)" class="space-y-5">
+                    <div class="grid sm:grid-cols-2 gap-5">
+                        <div>
+                            <label class="block text-xs font-bold uppercase text-slate-500 mb-2">Tu Nombre / Contacto *</label>
+                            <input type="text" id="nombre" required placeholder="Ej. Carlos García" class="w-full border border-slate-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brand-red focus:ring-1 focus:ring-brand-red">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold uppercase text-slate-500 mb-2">Tipo de Cliente *</label>
+                            <select id="perfil" required class="w-full border border-slate-300 rounded-xl px-4 py-3 text-sm bg-white focus:outline-none focus:border-brand-red focus:ring-1 focus:ring-brand-red">
+                                <option value="Colegio / Centro Educativo">Colegio / AMPA</option>
+                                <option value="Ayuntamiento / Entidad Pública">Ayuntamiento / Entidad Pública</option>
+                                <option value="Empresa / Evento Corporativo">Empresa (Teambuilding / Evento)</option>
+                                <option value="Particular / Fiesta Privada">Particular (Cumpleaños / Fiesta)</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="grid sm:grid-cols-2 gap-5">
+                        <div>
+                            <label class="block text-xs font-bold uppercase text-slate-500 mb-2">Localidad del Evento *</label>
+                            <input type="text" id="localidad" required placeholder="Ej. Toledo, Cuenca, Illescas..." class="w-full border border-slate-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brand-red focus:ring-1 focus:ring-brand-red">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold uppercase text-slate-500 mb-2">Fecha Aprox. / Curso</label>
+                            <input type="text" id="fecha" placeholder="Ej. Junio 2027 / Curso Escolar" class="w-full border border-slate-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brand-red focus:ring-1 focus:ring-brand-red">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold uppercase text-slate-500 mb-2">¿Qué actividades o evento tienes en mente? *</label>
+                        <textarea id="mensaje" rows="3" required placeholder="Cuéntanos qué necesitas (campamento, extraescolares, hinchables, simuladores F1, quads, canoas, nº aproximado de participantes...)" class="w-full border border-slate-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brand-red focus:ring-1 focus:ring-brand-red"></textarea>
+                    </div>
+
+                    <div class="pt-2 flex flex-col sm:flex-row gap-3">
+                        <button type="submit" class="flex-1 bg-brand-red hover:bg-brand-darkred text-white font-heading font-bold py-4 px-6 rounded-xl transition shadow-lg flex items-center justify-center space-x-2">
+                            <i class="fa-brands fa-whatsapp text-xl"></i>
+                            <span>Enviar Solicitud por WhatsApp</span>
+                        </button>
+                        <a href="mailto:info@anticiclon.es?subject=Solicitud%20de%20Presupuesto%20-%20Web%20Anticicl%C3%B3n" class="bg-slate-100 hover:bg-slate-200 text-slate-700 font-semibold py-4 px-5 rounded-xl transition text-sm flex items-center justify-center">
+                            <i class="fa-regular fa-envelope mr-2"></i> Por Email
+                        </a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER ACTUALIZADO A 2026 -->
+    <footer class="bg-slate-900 text-slate-400 py-12 px-4 border-t border-slate-800 text-sm">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="flex items-center space-x-3">
+                <span class="bg-brand-red text-white font-heading font-black px-3 py-1 rounded text-lg">ANTICICLÓN</span>
+                <span class="text-slate-500">|</span>
+                <span>25 años de deporte, ocio y aventura</span>
+            </div>
+            <div class="flex space-x-6 text-slate-300">
+                <a href="tel:637866425" class="hover:text-brand-red transition"><i class="fa-solid fa-phone mr-1"></i> 637 866 425</a>
+                <a href="mailto:info@anticiclon.es" class="hover:text-brand-red transition"><i class="fa-solid fa-envelope mr-1"></i> info@anticiclon.es</a>
+            </div>
+            <div class="text-xs text-slate-500">
+                Copyright © 2026 Anticiclón S.L. ® Todos los derechos reservados.
+            </div>
+        </div>
+    </footer>
+
+    <!-- BOTÓN FLOTANTE DE WHATSAPP -->
+    <a href="https://wa.me/34637866425?text=Hola%20Anticicl%C3%B3n,%20os%20escribo%20desde%20la%20web%20para%20consultar%20un%20presupuesto." target="_blank" aria-label="Contactar por WhatsApp" class="fixed bottom-6 right-6 z-50 bg-emerald-500 hover:bg-emerald-600 text-white w-14 h-14 rounded-full shadow-2xl flex items-center justify-center text-3xl transition transform hover:scale-110">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- SCRIPTS PARA EL EMBUDO INTELIGENTE -->
+    <script>
+        function seleccionarPerfil(perfilTexto) {
+            const select = document.getElementById('perfil');
+            select.value = perfilTexto;
+            document.getElementById('presupuesto').scrollIntoView({ behavior: 'smooth' });
+            setTimeout(() => {
+                document.getElementById('nombre').focus();
+            }, 600);
+        }
+
+        function enviarWhatsApp(e) {
+            e.preventDefault();
+            const nombre = document.getElementById('nombre').value;
+            const perfil = document.getElementById('perfil').value;
+            const localidad = document.getElementById('localidad').value;
+            const fecha = document.getElementById('fecha').value || 'Por definir';
+            const mensaje = document.getElementById('mensaje').value;
+
+            const textoWhatsApp = `Hola Anticiclón, soy *${nombre}*.
+
+` +
+                                  `📌 *Perfil:* ${perfil}
+` +
+                                  `📍 *Localidad:* ${localidad}
+` +
+                                  `📅 *Fecha aprox:* ${fecha}
+` +
+                                  `📝 *Consulta:* ${mensaje}`;
+
+            const url = `https://wa.me/34637866425?text=${encodeURIComponent(textoWhatsApp)}`;
+            window.open(url, '_blank');
+        }
+    </script>
+</body>
+</html>
